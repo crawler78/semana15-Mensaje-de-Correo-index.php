@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding: 21px 15px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f2f2f2;
+    color: #58595b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tarjeta {
+    position: relative;
+    width: 630px;
+    max-width: 100%;
+    padding: 30px 25px 25px;
+    background: #fff;
+    border: 2px solid #d2d2d2;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .07);
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    height: 6px;
+    background: #5872f0;
+}
+
+.campo {
+    margin-bottom: 24px;
+}
+
+.caja {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    border: 1px solid #b4b7ce;
+    background: #fff;
+}
+
+.caja label {
+    flex: 0 0 auto;
+    margin-right: 8px;
+    color: #58595b;
+    font-size: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.caja input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #444;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.caja-mensaje {
+    position: relative;
+    display: block;
+    height: 192px;
+    padding: 0;
+}
+
+.caja-mensaje label {
+    position: absolute;
+    top: 23px;
+    left: 22px;
+    margin: 0;
+    pointer-events: none;
+}
+
+.caja-mensaje textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 48px 22px 14px;
+    border: 0;
+    outline: none;
+    resize: vertical;
+    background: transparent;
+    color: #444;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.caja.error {
+    border-color: #d9534f;
+    background: #fffafa;
+}
+
+.texto-error {
+    display: block;
+    margin: 6px 0 0 2px;
+    color: #c9302c;
+    font-size: 13px;
+}
+
+.acciones {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 26px;
+}
+
+.boton {
+    display: inline-flex;
+    width: 160px;
+    height: 62px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    background: #fb6327;
+    color: #fff;
+    font-family: inherit;
+    font-size: 19.5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #ee5a1f;
+}
+
+.aviso {
+    padding: 11px 14px;
+    margin-bottom: 18px;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.aviso-error {
+    border: 1px solid #e7b0ad;
+    background: #fdf2f1;
+    color: #a02c28;
+}
+
+.aviso-error ul {
+    margin: 5px 0 0 17px;
+    padding: 0;
+}
+
+.aviso-ok {
+    border: 1px solid #b3d8bd;
+    background: #f1f9f3;
+    color: #26663c;
+}
+
+.datos {
+    padding: 14px 16px;
+    margin-top: 18px;
+    border: 1px solid #e0e0e0;
+    background: #fbfbfb;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.datos p {
+    margin: 0 0 8px;
+}
+
+.datos p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+    .tarjeta {
+        padding: 25px 16px 20px;
+    }
+
+    .caja {
+        padding: 0 14px;
+    }
+
+    .caja-mensaje label {
+        left: 14px;
+    }
+
+    .caja-mensaje textarea {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+}
